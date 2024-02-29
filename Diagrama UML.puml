@@ -1,0 +1,16 @@
+@startuml
+abstract class Ejercicios_Figuras.Figura
+annotation java.lang.Override
+class Ejercicios_Figuras.Circulo
+class Ejercicios_Figuras.Cuadrado
+class Ejercicios_Figuras.Main
+class Ejercicios_Figuras.Triangulo
+class java.util.Scanner
+Ejercicios_Figuras.Circulo --|> Ejercicios_Figuras.Figura
+Ejercicios_Figuras.Circulo ..> java.lang.Override
+Ejercicios_Figuras.Cuadrado --|> Ejercicios_Figuras.Figura
+Ejercicios_Figuras.Cuadrado ..> java.lang.Override
+Ejercicios_Figuras.Main ..> java.util.Scanner
+Ejercicios_Figuras.Triangulo --|> Ejercicios_Figuras.Figura
+Ejercicios_Figuras.Triangulo ..> java.lang.Override
+@enduml
