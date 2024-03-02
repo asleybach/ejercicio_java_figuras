@@ -1,6 +1,9 @@
 
 package Ejercicios_Figuras;
 
+import static Ejercicios_Figuras.FiguraFactory.calcularAreaCuadrado;
+import static Ejercicios_Figuras.FiguraFactory.calcularPerimetroCuadrado;
+
 
 public class Cuadrado extends Figura {
 
@@ -12,12 +15,14 @@ public class Cuadrado extends Figura {
 
     @Override
     public void calcularArea() {
-        area = Math.pow(lado, 2);
+        //area = Math.pow(lado, 2);
+        area = calcularAreaCuadrado(lado);
     }
 
     @Override
     public void calcularPerimetro() {
-        perimetro = 4 * lado;
+        //perimetro = 4 * lado;
+        perimetro = calcularPerimetroCuadrado(lado);
     }
 
    

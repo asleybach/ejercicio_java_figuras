@@ -1,14 +1,4 @@
-# Ejercicio Java Figuras
 
-Seleccione como patron de diseño de creación Abstract Factory pues me permite crear 
-colecciones de objetos ( en este caso figuras ) cuyas caracteristicas pueden cambiar 
-(lados de la figura por ejemplo), sin especificar su clase concreta. 
-Adicional senti que era el patron de diseño de creación más sencillo de implementar.
-
-Se creo la clase FiguraFactory para la creación de colecciones de figura, identificandolas con el nombre
-Solamente cambie la clase hija Cuadrado para aplicar los cambios correspondientes al patron de diseña Factory.  
-
-####
 package Ejercicios_Figuras;
 
 import java.util.Scanner;
@@ -43,4 +33,6 @@ public abstract class FiguraFactory {
     }
     
     }
-
+    
+           
+    

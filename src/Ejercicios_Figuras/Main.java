@@ -38,15 +38,20 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.println("Ingrese el lado del cuadrado: ");
+                    /*System.out.println("Ingrese el lado del cuadrado: ");
                     double lado = scanner.nextDouble();
-
                     Cuadrado cuadrado = new Cuadrado(lado);
                     cuadrado.calcularArea();
-                    cuadrado.calcularPerimetro();
+                    cuadrado.calcularPerimetro();*/
+                    
+                    Figura figura = FiguraFactory.crearFigura("cuadrado");
+                    figura.calcularArea();
 
-                    System.out.println("Área del cuadrado: " + cuadrado.Area());
-                    System.out.println("Perímetro del cuadrado: " + cuadrado.Perimetro());
+                    /*System.out.println("Área del cuadrado: " + cuadrado.Area());
+                    System.out.println("Perímetro del cuadrado: " + cuadrado.Perimetro());*/
+                    
+                    System.out.println("el área es: " + figura.area);
+                    System.out.println("el perimetro es: " + figura.area);
                     break;
                      
                 case 3:
