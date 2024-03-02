@@ -45,14 +45,19 @@ public class Main {
                     cuadrado.calcularPerimetro();*/
                     
                     Figura figura = FiguraFactory.crearFigura("cuadrado");
+                    Manejador manejador = new ManejadorCalcularArea();
+                    manejador.manejarSolicitud(figura);
+                    //manejador.calcularArea(figura);
                     figura.calcularArea();
-
+                    figura.calcularPerimetro(); 
+                    
                     /*System.out.println("Área del cuadrado: " + cuadrado.Area());
                     System.out.println("Perímetro del cuadrado: " + cuadrado.Perimetro());*/
                     
                     System.out.println("el área es: " + figura.area);
-                    System.out.println("el perimetro es: " + figura.area);
+                    System.out.println("el perimetro es: " + figura.perimetro);
                     break;
+
                      
                 case 3:
                     System.out.println("Ingrese el radio del Circulo: ");

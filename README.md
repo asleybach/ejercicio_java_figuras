@@ -44,3 +44,44 @@ public abstract class FiguraFactory {
     
     }
 
+
+se selecciono como patron de diseño de comportamiento, el patrón chain responsibility... 
+bueno por lo menos se intento usarlo, esta parte con la creación de la clase manejador como interface, 
+y la clase manejadorCalculoArea que implementa al manejador. 
+Esta selección se debe a que se visualizo que este patron de diseño 
+permite manejar codigo y solicitudes [para su ejecución] por separado, 
+lo que facilita extender el codigo si es necesario sin afectar el llamado a la ejecución.
+
+####
+
+package Ejercicios_Figuras;
+
+import static Ejercicios_Figuras.FiguraFactory.calcularAreaCuadrado;
+
+public class ManejadorCalcularArea implements Manejador {
+
+    private Manejador manejador;
+
+    @Override
+    public void manejarSolicitud(Figura figura) {
+        if (manejador != null) {
+            manejador.manejarSolicitud(figura);
+        } 
+    }
+    
+    public void calcularArea() {
+        double lado = 0;
+        //area = Math.pow(lado, 2);
+        double area = calcularAreaCuadrado(lado);
+    }
+
+    @Override
+    public Ejercicios_Figuras.Manejador Manejador() {
+        throw new UnsupportedOperationException("Not supported yet."); // generados por el ide
+    }
+
+    @Override
+    public void calcularArea(Figura figura) {
+        throw new UnsupportedOperationException("Not supported yet.");// generados por el ide
+    }
+
