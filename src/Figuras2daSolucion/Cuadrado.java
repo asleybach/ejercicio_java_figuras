@@ -10,8 +10,9 @@ public class Cuadrado extends Figura {
     }
 
     @Override
-    public void calcularArea() {
-        area = Math.pow(lado, 2);
+    public void calcularArea(CalculadorArea calculadorArea) {
+        //area = Math.pow(lado, 2);
+        area = calculadorArea.calcularArea(lado);
     }
 
     @Override
@@ -35,6 +36,8 @@ public class Cuadrado extends Figura {
     public double getPerimetro(){
         return perimetro;
     }
+
+   
     
     
 }

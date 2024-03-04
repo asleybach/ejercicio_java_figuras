@@ -12,8 +12,9 @@ public class Circulo extends Figura {
 
 
     @Override
-    public void calcularArea() {
-        area = Math.PI * Math.pow(radio, 2);
+    public void calcularArea(CalculadorArea calculadorArea) {
+        //area = Math.PI * Math.pow(radio, 2);
+        area = calculadorArea.calcularArea(radio);
     }
 
     @Override
@@ -36,6 +37,8 @@ public class Circulo extends Figura {
     public double getPerimetro(){
         return perimetro;
     }
+
+  
     
     
 }

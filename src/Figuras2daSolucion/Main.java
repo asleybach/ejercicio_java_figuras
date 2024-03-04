@@ -5,6 +5,10 @@ import java.util.Scanner;
 
 public class Main {
 
+    /*private static CalculadorAreaTriangulo CalculadorAreaTriangulo;
+    private static CalculadorAreaCuadrado CalculadorAreaCuadrado;
+    private static CalculadorAreaTriangulo CalculadorAreaCirculo;*/
+
     public static void main(String[] args) {
         
         Scanner scanner = new Scanner(System.in);
@@ -26,8 +30,14 @@ public class Main {
 
                 triangulo.setBase(base);
                 triangulo.setAltura(altura);
+                
+                //contexto con un calculador de área para cuadrados
+                Contexto calculador = new Contexto(new CalculadorAreaTriangulo());
+         
+                //Calcular el área del cuadrado
+                calculador.calcularArea(triangulo);
 
-                triangulo.calcularArea();
+                //triangulo.calcularArea(CalculadorAreaTriangulo);
                 triangulo.calcularPerimetro();
                 
                 System.out.println("Área del triángulo: " + triangulo.getArea());
@@ -39,8 +49,14 @@ public class Main {
                 double lado = scanner.nextDouble();
 
                 cuadrado.setLado(lado);
+                
+                //contexto con un calculador de área para cuadrados
+                Contexto calculador = new Contexto(new CalculadorAreaCuadrado());
+         
+                //Calcular el área del cuadrado
+                calculador.calcularArea(cuadrado);
 
-                cuadrado.calcularArea();
+                //cuadrado.calcularArea();
                 cuadrado.calcularPerimetro();
 
                 System.out.println("Área del cuadrado: " + cuadrado.getArea());
@@ -52,7 +68,13 @@ public class Main {
                 double radio = scanner.nextDouble();
                 circulo.setRadio(radio);
                 
-                circulo.calcularArea();
+                //contexto con un calculador de área para cuadrados
+                Contexto calculador = new Contexto(new CalculadorAreaCirculo());
+         
+                //Calcular el área del cuadrado
+                calculador.calcularArea(circulo);
+                
+                //circulo.calcularArea();
                 circulo.calcularPerimetro();
                 
                 System.out.println("Área del Circulo: " + circulo.getArea());

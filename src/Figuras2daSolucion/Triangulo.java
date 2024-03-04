@@ -12,8 +12,8 @@ public class Triangulo extends Figura {
     }
 
     @Override
-    public void calcularArea() {
-        area = (base * altura) / 2;
+    public void calcularArea(CalculadorArea calculadorArea) {
+        area = calculadorArea.calcularArea(base, altura);
     }
 
     @Override
@@ -44,6 +44,8 @@ public class Triangulo extends Figura {
     public double getPerimetro(){
         return perimetro;
     }
+
+    
 
 
 }
